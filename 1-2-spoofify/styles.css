@@ -46,3 +46,10 @@ li span:first-of-type {
 li span:last-of-type {
     font-style: italic;
 }
+
+.gallery-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0.5rem;
+}
