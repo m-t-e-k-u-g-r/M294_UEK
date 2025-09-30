@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modify elements in DOM</title>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.style.backgroundColor = "red";
+
+            document.getElementsByTagName("h1")[0].innerText = "Matteo Krüger";
+
+            const p = document.querySelector("p");
+            p.classList.add("large")
+
+            const ul = document.querySelector("ul");
+            const li = document.createElement("li");
+            li.innerText = "Text";
+            ul.append(li);
+
+            document.querySelectorAll("li")[1].remove();
+    
+            const h1 = document.querySelector("h1");
+            const img = document.createElement("img");
+            img.src = "images/image_1.jpg"
+            h1.after(img)
+        })
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button onclick="buttonClick()">Click</button>
     <h1>Platzhalter</h1>
     <p>Lorem Ipsum</p>
     <ul>
