@@ -1,0 +1,17 @@
+#destinations {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 5px;
+    li {
+        span {
+            padding: 5px;
+            border-radius: 0.5em;
+            display: inline-block;
+        }
+    }
+}
+
+.marked {
+    background-color: yellow;
+}
