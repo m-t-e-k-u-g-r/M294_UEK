@@ -11,3 +11,14 @@ function onClick2() {
     counter2 += 1;
     document.getElementById("counter2").innerText = counter2;
 }
+
+const ball = document.getElementById("ball");
+const field = document.getElementById("green_rectangle");
+field.addEventListener("mousedown", moveBall);
+
+function moveBall(event) {
+    let clickX = (event.clientX);
+    let clickY = (event.clientY);
+    ball.style.left = clickX - ball.width/2 + "px";
+    ball.style.top = clickY - ball.height/2 + "px";
+}
