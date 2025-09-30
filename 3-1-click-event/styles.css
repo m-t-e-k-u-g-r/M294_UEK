@@ -1,0 +1,16 @@
+#green_rectangle {
+    height: 400px;
+    width: 800px;
+    background-color: green;
+    img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+}
+
+#ball {
+    position: absolute;
+    top: 200px;
+    left: 400px;    
+}
