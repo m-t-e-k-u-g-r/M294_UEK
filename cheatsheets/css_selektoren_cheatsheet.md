@@ -24,7 +24,8 @@
 ### Pseudoklassen
 - `document.querySelector("li:first-child")` → Erstes `<li>` im Elterncontainer  
 - `document.querySelector("li:last-child")` → Letztes `<li>`  
-- `document.querySelector("li:nth-child(2)")` → Zweites `<li>`
+- `document.querySelector("li:nth-of-type(2)")` → Zweites `<li>`
+- `document.querySelector("li:nth-child(2)")` → Zweites Kind, das ein `<li>` ist
 
 ### Kombinatoren
 
