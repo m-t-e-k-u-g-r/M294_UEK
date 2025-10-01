@@ -1,0 +1,30 @@
+body {
+    background-color: #2869CB;
+    padding-left: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+form .button-row {
+    display: flex;
+    gap: 10px;
+}
+
+.contact {
+    padding: 16px 150px 10px 16px;
+    border-radius: 1rem;
+    background-color: #37B5FF;
+    max-width: fit-content;
+}
+
+label {
+    font-weight: bold;
+}
+
+.address p {
+    margin: 0;
+}
