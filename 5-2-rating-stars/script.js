@@ -12,8 +12,12 @@ for (let i = 1; i <= 5; i++) {
 function rate(star) {
     const Class = this.className;
     const number = parseInt(Class.split("-")[1]);
-    for (let i = 1; i <= number; i++) {
+    for (let i = 1; i <= 5; i++) {
         const selected_stars = document.querySelector(".star-" + i);
-        selected_stars.src = filled_path;
+        if(i <= number){
+            selected_stars.src = filled_path;
+        }else{
+            selected_stars.src = empty_path;
+        }
     }
 }
