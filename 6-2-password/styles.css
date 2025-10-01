@@ -1,0 +1,16 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100px;
+}
+
+input:user-invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
+button {
+    width: 75px;
+}
