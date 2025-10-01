@@ -1,0 +1,17 @@
+.grid {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.hidden {
+    filter: brightness(0%);
+}
+
+.turned {
+    filter:brightness(100%);
+}
+
+.found {
+    filter:brightness(100%);
+}
