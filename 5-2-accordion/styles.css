@@ -1,0 +1,20 @@
+.accordion {
+    width: 100%;
+    background-color: #eeeeee;
+    text-align: left;
+    padding: 18px;
+    border: none;
+    outline: none;
+}
+
+.panel {
+    display: none;
+}
+
+.button_active {
+    background-color: #cccccc;
+}
+
+.active {
+    display: block;
+}
