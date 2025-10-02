@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formular mit Assistenzfunktion</title>
+    <script src="script.js" defer></script>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        font-weight: bold;
+      }
+      button {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="firstName">First name</label>
+      <input type="text" name="first_name" id="firstName" required>
+      <label for="lastName">Last name</label>
+      <input type="text" name="last_name" id="lastName" required>
+      <label for="street">Street</label>
+      <input type="text" name="street" id="street" required>
+      <label for="postalCode">Postal code</label>
+      <input type="number" name="postal_code" id="postalCode" required>
+      <label for="location">Location</label>
+      <input type="text" name="location" id="location" required>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
