@@ -45,3 +45,14 @@ function addTask(e) {
         },
     })
 }
+
+const delButton = document.getElementById("delTask");
+
+delButton.addEventListener("click", deleteTask);
+
+function deleteTask() {
+    const delId = document.getElementById("id").value;
+    fetch(oneTask + delId, {
+        method: 'DELETE'
+    })
+}
