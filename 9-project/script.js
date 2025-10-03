@@ -30,10 +30,11 @@ function getAllTasks() {
     })
     .then((res) => res.json())
     .then((data) => {
-        for (let i = 0; i <= data.length; i++) {
+        for (let i = 0; i < data.length; i++) {
             const tasksContainer = document.querySelector("div#tasksContainer");
             const task = data[i];
             const container = document.createElement("div");
+            container.classList.add("task-card");
             const title = document.createElement("h3");
             title.innerText = task.title;
             const completed = document.createElement("p");
@@ -67,6 +68,8 @@ function addTask(e) {
             "Authorization": token
         },
     })
+
+    document.forms.newTask.classList.toggle("visible")
 }
 
 const delButton = document.getElementById("delTask");
@@ -107,4 +110,22 @@ function updateTask(e) {
             "Authorization": token
         },
     })
+
+    document.forms.updateTask.classList.toggle("visible");
+}
+
+const addBtn = document.getElementById("addTask");
+
+addBtn.addEventListener("click", showAddForm);
+
+function showAddForm() {
+    document.forms.newTask.classList.toggle("visible");
+}
+
+const editBtn = document.getElementById("editTask");
+
+editBtn.addEventListener("click", showEditForm);
+
+function showEditForm() {
+    document.forms.updateTask.classList.toggle("visible");
 }

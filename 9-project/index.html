@@ -6,13 +6,17 @@
     <title>Task-Manager</title>
     <script src="login/login.js"></script>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body onload="checkAuthentication()">
     <h1>Task-Manager</h1>
     <button id="allTasks">Get all tasks</button>
     <button id="addTask">Add task</button>
-    <input type="number" id="id" name="task_id">
-    <button id="delTask">Delete task</button>
+    <button id="editTask">Edit task</button>
+    <div id="deleteControls">
+        <input type="number" id="id" name="task_id">
+        <button id="delTask">Delete task</button>
+    </div>
     <form name="newTask" id="newTask">
         <h2>Add task</h2>
         <label>Task

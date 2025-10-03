@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 10px;
+    height: 100vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+#newTask,
+#updateTask {
+    display: none;
+}
+#newTask.visible,
+#updateTask.visible {
+    display: block;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-left: 5px;
+}
+button {
+    align-self: center;
+    text-align: center;
+    padding: 6px 6px;
+}
+button [type="submit"] {
+    width: 60px;
+}
+
+#deleteControls input#id {
+    width: 120px;
+}
+
+.task-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    margin: 10px 0;
+}
+
+#tasksContainer .task-card h3 {
+    margin: 0 0 6px 0;
+}
