@@ -19,6 +19,21 @@
         </label>
         <button type="submit">Add</button>
     </form>
+    <form name="updateTask" id="updateTask">
+        <h2>Update Task</h2>
+        <label>Id
+            <input type="number" name="upd_task_id" id="upd_task_id">
+        </label>
+        <label>Task
+            <input type="text" name="upd_task" id="upd_task">
+        </label>
+        <label>Status:</label>
+        <input type="radio" id="completed" name="status" value="true">
+        <label for="completed">Completed</label>
+        <input type="radio" id="incomplete" name="status" value="false">
+        <label for="incomplete">Incomplete</label>
+        <button type="submit">Update</button>
+    </form>
     <div id="tasksContainer">
 
     </div>

@@ -56,3 +56,28 @@ function deleteTask() {
         method: 'DELETE'
     })
 }
+
+const updTaskForm = document.forms.updateTask;
+
+updTaskForm.addEventListener("submit", updateTask);
+
+function updateTask(e) {
+    e.preventDefault();
+
+    const formData = new FormData(updTaskForm);
+    const id = formData.get("upd_task_id");
+    const task = formData.get("upd_task");
+    const status = formData.get("status");
+
+    fetch(allTasks, {
+        method: 'PUT',
+        body: JSON.stringify({
+            id: id,
+            title: task,
+            completed: status,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+}
