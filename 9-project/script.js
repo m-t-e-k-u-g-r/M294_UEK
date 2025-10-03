@@ -30,6 +30,10 @@ function getAllTasks() {
     })
     .then((res) => res.json())
     .then((data) => {
+        if (!Array.isArray(data) || data.length === 0) {
+            alert("No tasks available.");
+            return;
+        }
         for (let i = 0; i < data.length; i++) {
             const tasksContainer = document.querySelector("div#tasksContainer");
             const task = data[i];
