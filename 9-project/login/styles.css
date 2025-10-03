@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+button {
+    align-self: center;
+    text-align: center;
+    padding: 6px 6px;
+    width: 60px;
+}
