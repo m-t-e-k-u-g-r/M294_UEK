@@ -22,3 +22,26 @@ function getAllTasks() {
         }
     })
 }
+
+const addTaskForm = document.forms.newTask;
+
+addTaskForm.addEventListener("submit", addTask);
+
+function addTask(e) {
+    e.preventDefault();
+
+    const formData = new FormData(addTaskForm);
+    const task = formData.get("task");
+
+    fetch(allTasks, {
+        method: 'POST',
+        body: JSON.stringify({
+            id: 0,
+            title: task,
+            completed: false,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+}
