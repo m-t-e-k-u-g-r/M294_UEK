@@ -1,11 +1,33 @@
-const oneTask = "http://localhost:3000/task/"
-const allTasks = "http://localhost:3000/tasks"
+const oneTask = "http://localhost:3000/auth/jwt/task/"
+const allTasks = "http://localhost:3000/auth/jwt/tasks"
+const verifyURL = "http://localhost:3000/auth/jwt/verify"
+
+const params = new URLSearchParams(window.location.search);
+const token = params.get("token");
+
+function checkAuthentication() {
+    
+    fetch(verifyURL, {
+        headers: {
+            "Authorization": token
+        },
+    })
+    .then((res) => {
+        if (res.status != 200) {
+            window.location.href = "login/index.html";
+        }
+    })
+}
 
 const allTasksBtn = document.getElementById("allTasks");
 allTasksBtn.addEventListener("click", getAllTasks);
 
 function getAllTasks() {
-    fetch(allTasks)
+    fetch(allTasks, {
+        headers: {
+            "Authorization": token
+        }
+    })
     .then((res) => res.json())
     .then((data) => {
         for (let i = 0; i <= data.length; i++) {
@@ -42,6 +64,7 @@ function addTask(e) {
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
+            "Authorization": token
         },
     })
 }
@@ -53,7 +76,10 @@ delButton.addEventListener("click", deleteTask);
 function deleteTask() {
     const delId = document.getElementById("id").value;
     fetch(oneTask + delId, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {
+            "Authorization": token
+        },
     })
 }
 
@@ -78,6 +104,7 @@ function updateTask(e) {
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
+            "Authorization": token
         },
     })
 }

@@ -21,12 +21,12 @@ function login(e) {
     })
     .then((res) => res.json())
     .then((data) => {
+        window.location.href = "../index.html?" + "token=" + encodeURIComponent("Bearer " + data["token"]);
         fetch(tasks_url, {
             headers: {
                 "Authorization": "Bearer " + data["token"]},
         })
     })
 
-    window.location.href = "../index.html";
 }
 
